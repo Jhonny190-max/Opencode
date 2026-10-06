@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechNova - Accesorios de tecnología: audio, teclados y accesorios con ofertas, envío gratis y garantía.">
+  <title>TechNova | Accesorios de tecnología</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="promo-bar">
+      <div class="promo-track" id="promoTrack" role="status" aria-live="polite">
+        <span class="promo-msg is-active">🚚 Envío gratis en pedidos mayores a US$ 150</span>
+        <span class="promo-msg">🎟️ Usa el cupón NOVA10 y ahorra un 10%</span>
+        <span class="promo-msg">⚡ Oferta flash: hasta −25% en productos seleccionados</span>
+      </div>
+    </div>
+
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="#inicio" class="nav__logo">
+        <span class="nav__logo-mark" aria-hidden="true">◆</span>
+        Tech<span class="accent">Nova</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#inicio" class="nav__link">Inicio</a></li>
+        <li><a href="#catalogo" class="nav__link">Catálogo</a></li>
+        <li><a href="#ofertas" class="nav__link">Ofertas</a></li>
+        <li><a href="#opiniones" class="nav__link">Opiniones</a></li>
+        <li><a href="#contacto" class="nav__link">Contacto</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Cambiar a modo oscuro" title="Cambiar tema">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
+        <button class="icon-btn" id="navFavBtn" aria-label="Ver favoritos" title="Favoritos">
+          <span aria-hidden="true">♥</span>
+          <span class="badge-count" id="favCount">0</span>
+        </button>
+        <button class="icon-btn cart-btn" id="cartToggle" aria-label="Abrir carrito de compras" aria-expanded="false" aria-controls="cartDrawer">
+          <span aria-hidden="true">🛒</span>
+          <span class="badge-count" id="cartCount" aria-live="polite">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="blob blob--1" aria-hidden="true"></div>
+      <div class="blob blob--2" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">Accesorios de tecnología</p>
+          <h1 class="hero__title">Equipa tu setup con <span class="accent">TechNova</span></h1>
+          <p class="hero__desc">
+            Audio de alta fidelidad, teclados mecánicos y accesorios seleccionados
+            para quienes exigen rendimiento y diseño. Envío rápido y garantía oficial.
+          </p>
+          <div class="hero__cta">
+            <button class="btn btn--primary" id="heroCta">Ver catálogo</button>
+            <a href="#ofertas" class="btn btn--ghost">Ver ofertas ⚡</a>
+          </div>
+          <ul class="hero__features" aria-label="Beneficios">
+            <li>Envío gratis +US$ 150</li>
+            <li>Garantía 12 meses</li>
+            <li>30 días de devolución</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero-card hero-card--1">
+            <span class="hero-card__emoji">🎧</span>
+            <div><strong>NovaSound X2</strong><small>−24% hoy</small></div>
+          </div>
+          <div class="hero-card hero-card--2">
+            <span class="hero-card__emoji">⌨️</span>
+            <div><strong>NovaKeys</strong><small>Hot-swap RGB</small></div>
+          </div>
+          <div class="hero-card hero-card--3">
+            <span class="hero-card__emoji">⭐</span>
+            <div><strong>4.8 / 5</strong><small>1.200+ reseñas</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estadísticas animadas -->
+      <div class="container">
+        <dl class="stats" id="stats"></dl>
+      </div>
+    </section>
+
+    <!-- ================= CONFIANZA ================= -->
+    <section class="trust" aria-label="Ventajas de comprar aquí">
+      <div class="container trust__grid">
+        <div class="trust__item"><span aria-hidden="true">🚚</span><div><strong>Envío rápido</strong><small>24–72 h en toda la región</small></div></div>
+        <div class="trust__item"><span aria-hidden="true">🛡️</span><div><strong>Garantía 12 meses</strong><small>Cobertura oficial incluida</small></div></div>
+        <div class="trust__item"><span aria-hidden="true">💳</span><div><strong>Pago seguro</strong><small>Hasta 3 cuotas sin interés</small></div></div>
+        <div class="trust__item"><span aria-hidden="true">💬</span><div><strong>Soporte real</strong><small>Respuesta en menos de 24 h</small></div></div>
+      </div>
+    </section>
+
+    <!-- ================= CATEGORÍAS ================= -->
+    <section class="categories" id="categorias">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2>Explora por categoría</h2>
+          <p>Toca una categoría y filtramos el catálogo por ti</p>
+        </header>
+        <div class="cat-grid">
+          <button class="cat-card cat-card--audio reveal" data-cat-jump="Audio">
+            <span class="cat-card__icon" aria-hidden="true">🎧</span>
+            <strong>Audio</strong>
+            <small>4 productos</small>
+            <span class="cat-card__cta">Ver productos →</span>
+          </button>
+          <button class="cat-card cat-card--teclados reveal" data-cat-jump="Teclados">
+            <span class="cat-card__icon" aria-hidden="true">⌨️</span>
+            <strong>Teclados</strong>
+            <small>4 productos</small>
+            <span class="cat-card__cta">Ver productos →</span>
+          </button>
+          <button class="cat-card cat-card--accesorios reveal" data-cat-jump="Accesorios">
+            <span class="cat-card__icon" aria-hidden="true">🖱️</span>
+            <strong>Accesorios</strong>
+            <small>4 productos</small>
+            <span class="cat-card__cta">Ver productos →</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OFERTA FLASH ================= -->
+    <section class="deal" id="ofertas">
+      <div class="container">
+        <div class="deal__banner reveal">
+          <div class="deal__text">
+            <p class="deal__kicker">⚡ Oferta flash</p>
+            <h2>Hasta −25% mientras dure el contador</h2>
+            <p class="deal__sub">Cupón adicional <strong>NOVA10</strong> aplicable sobre cualquier descuento.</p>
+            <div class="countdown" id="dealCountdown" role="timer" aria-label="Tiempo restante de la oferta">
+              <div class="countdown__unit"><span id="cdH">00</span><small>horas</small></div>
+              <div class="countdown__unit"><span id="cdM">00</span><small>min</small></div>
+              <div class="countdown__unit"><span id="cdS">00</span><small>seg</small></div>
+            </div>
+          </div>
+          <div class="deal__grid" id="dealGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CATÁLOGO ================= -->
+    <section class="catalog" id="catalogo">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2>Catálogo completo</h2>
+          <p>Busca, filtra, ordena y compara hasta 3 productos</p>
+        </header>
+
+        <div class="toolbar reveal">
+          <div class="search">
+            <label for="searchInput" class="visually-hidden">Buscar productos por nombre</label>
+            <input type="search" id="searchInput" placeholder="Buscar por nombre…" autocomplete="off">
+          </div>
+
+          <div class="filters" id="filters" role="group" aria-label="Filtrar por categoría">
+            <button class="chip chip--active" data-category="Todos">Todos</button>
+            <button class="chip" data-category="Audio">Audio</button>
+            <button class="chip" data-category="Teclados">Teclados</button>
+            <button class="chip" data-category="Accesorios">Accesorios</button>
+          </div>
+
+          <div class="toolbar__row">
+            <div class="field-inline">
+              <label for="sortSelect">Ordenar</label>
+              <select id="sortSelect">
+                <option value="featured">Destacados</option>
+                <option value="price-asc">Precio: menor a mayor</option>
+                <option value="price-desc">Precio: mayor a menor</option>
+                <option value="rating">Mejor valorados</option>
+                <option value="name">Nombre A–Z</option>
+              </select>
+            </div>
+
+            <div class="field-inline field-inline--range">
+              <label for="priceRange">Hasta <strong id="priceValue">US$ 150+</strong></label>
+              <input type="range" id="priceRange" min="0" max="150" step="5" value="150">
+            </div>
+
+            <div class="view-toggle" role="group" aria-label="Vista del catálogo">
+              <button class="icon-btn view-btn is-active" id="viewGrid" aria-label="Vista de cuadrícula" aria-pressed="true">▦</button>
+              <button class="icon-btn view-btn" id="viewList" aria-label="Vista de lista" aria-pressed="false">☰</button>
+            </div>
+
+            <button class="chip chip--fav" id="favToggle" aria-pressed="false">♥ Favoritos <span id="favToggleCount">0</span></button>
+          </div>
+        </div>
+
+        <p class="results-info" id="resultsInfo" role="status" aria-live="polite"></p>
+
+        <div class="grid" id="productGrid"></div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <span aria-hidden="true">🔍</span>
+          <h3>Sin resultados</h3>
+          <p>No encontramos productos que coincidan con tu búsqueda o filtros.</p>
+          <button class="btn btn--primary" id="clearFilters">Limpiar filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OPINIONES ================= -->
+    <section class="testimonials" id="opiniones">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2>Lo que dicen nuestros clientes</h2>
+          <p>Reseñas verificadas de compradores reales</p>
+        </header>
+
+        <div class="slider reveal">
+          <button class="slider__arrow" id="testiPrev" aria-label="Testimonio anterior">‹</button>
+          <ul class="slider__track" id="testiTrack"></ul>
+          <button class="slider__arrow" id="testiNext" aria-label="Siguiente testimonio">›</button>
+        </div>
+        <div class="slider__dots" id="testiDots" role="tablist" aria-label="Seleccionar testimonio"></div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="faq" id="faq">
+      <div class="container container--narrow">
+        <header class="section-head reveal">
+          <h2>Preguntas frecuentes</h2>
+          <p>Lo que más nos preguntan antes de comprar</p>
+        </header>
+        <div id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter__box reveal">
+          <div>
+            <h2>🎉 5% extra en tu primer pedido</h2>
+            <p>Suscríbete y recibe el cupón <strong>NOVA10</strong> más novedades y preventas.</p>
+          </div>
+          <form class="newsletter__form" id="newsletterForm" novalidate>
+            <label for="newsletterEmail" class="visually-hidden">Tu correo electrónico</label>
+            <input type="email" id="newsletterEmail" placeholder="tucorreo@dominio.com" autocomplete="email">
+            <button class="btn btn--primary" type="submit">Suscribirme</button>
+            <p class="newsletter__msg" id="newsletterMsg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="contact" id="contacto">
+      <div class="container contact__inner">
+        <div class="contact__info reveal">
+          <h2>Hablemos</h2>
+          <p>¿Dudas sobre un producto o tu pedido? Escríbenos y respondemos en menos de 24 h.</p>
+          <ul class="contact__list">
+            <li><strong>Email:</strong> hola@technova.shop</li>
+            <li><strong>Teléfono:</strong> +1 (555) 010-2030</li>
+            <li><strong>Horario:</strong> Lun a Vie, 9:00 – 18:00</li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="form__field">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" autocomplete="name" aria-describedby="nameError">
+            <p class="form__error" id="nameError" role="alert"></p>
+          </div>
+
+          <div class="form__field">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" autocomplete="email" aria-describedby="emailError">
+            <p class="form__error" id="emailError" role="alert"></p>
+          </div>
+
+          <div class="form__field">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" aria-describedby="messageError"></textarea>
+            <p class="form__error" id="messageError" role="alert"></p>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">Enviar mensaje</button>
+          <p class="form__success" id="formSuccess" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#inicio" class="nav__logo"><span class="nav__logo-mark" aria-hidden="true">◆</span>Tech<span class="accent">Nova</span></a>
+        <p>Tecnología seleccionada para creators, gamers y profesionales. Envío rápido y garantía oficial.</p>
+        <div class="footer__social">
+          <a href="#inicio" aria-label="TechNova en Instagram">IG</a>
+          <a href="#inicio" aria-label="TechNova en X">X</a>
+          <a href="#inicio" aria-label="TechNova en YouTube">YT</a>
+          <a href="#inicio" aria-label="TechNova en TikTok">TT</a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Enlaces del sitio">
+        <h3>Tienda</h3>
+        <ul>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#ofertas">Ofertas</a></li>
+          <li><a href="#categorias">Categorías</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Ayuda">
+        <h3>Ayuda</h3>
+        <ul>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#contacto">Envíos y devoluciones</a></li>
+          <li><a href="#contacto">Garantías</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h3>Contacto</h3>
+        <ul>
+          <li>hola@technova.shop</li>
+          <li>+1 (555) 010-2030</li>
+          <li>Lun–Vie, 9:00–18:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> TechNova. Todos los derechos reservados.</p>
+      <p class="footer__pay" aria-label="Métodos de pago aceptados">VISA · MASTERCARD · PAYPAL · MASTRO</p>
+    </div>
+  </footer>
+
+  <!-- ================= CARRITO (drawer) ================= -->
+  <div class="overlay" id="overlay" hidden></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+    <header class="cart-drawer__head">
+      <h2>Tu carrito <span class="cart-drawer__count" id="drawerCount"></span></h2>
+      <button class="icon-btn" id="cartClose" aria-label="Cerrar carrito">✕</button>
+    </header>
+
+    <div class="cart-drawer__body" id="cartItems"></div>
+
+    <div class="cart-empty" id="cartEmpty">
+      <span aria-hidden="true">🛒</span>
+      <p>Tu carrito está vacío.</p>
+      <button class="btn btn--primary" id="cartShopBtn">Explorar productos</button>
+    </div>
+
+    <footer class="cart-drawer__foot" id="cartFoot" hidden>
+      <div class="ship-progress">
+        <p id="shipText"></p>
+        <div class="ship-progress__bar"><span id="shipBar"></span></div>
+      </div>
+
+      <div class="coupon">
+        <label for="couponInput" class="visually-hidden">Código de cupón</label>
+        <input type="text" id="couponInput" placeholder="Cupón (ej. NOVA10)" autocomplete="off">
+        <button class="btn btn--ghost" id="couponBtn" type="button">Aplicar</button>
+      </div>
+      <p class="coupon__msg" id="couponMsg" role="status" aria-live="polite"></p>
+
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd id="sumSubtotal">US$ 0.00</dd></div>
+        <div class="totals__discount" id="discountRow" hidden><dt>Descuento</dt><dd id="sumDiscount">− US$ 0.00</dd></div>
+        <div><dt>Envío</dt><dd id="sumShipping">US$ 0.00</dd></div>
+        <div class="totals__total"><dt>Total</dt><dd id="cartTotal">US$ 0.00</dd></div>
+      </dl>
+
+      <button class="btn btn--primary btn--block" id="checkoutBtn">Finalizar compra</button>
+      <button class="btn btn--ghost btn--block" id="clearCartBtn">Vaciar carrito</button>
+    </footer>
+  </aside>
+
+  <!-- ================= QUICK VIEW ================= -->
+  <div class="modal" id="quickView" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel modal__panel--wide" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+      <button class="modal__close icon-btn" data-close-modal aria-label="Cerrar vista rápida">✕</button>
+      <div class="qv" id="qvBody"></div>
+    </div>
+  </div>
+
+  <!-- ================= COMPARADOR ================= -->
+  <div class="compare-bar" id="compareBar" hidden>
+    <div class="container compare-bar__inner">
+      <span class="compare-bar__label">Comparar (<span id="compareCount">0</span>/3)</span>
+      <div class="compare-bar__items" id="compareList"></div>
+      <div class="compare-bar__actions">
+        <button class="btn btn--ghost" id="compareClearBtn">Vaciar</button>
+        <button class="btn btn--primary" id="compareOpenBtn">Comparar ahora</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="compareModal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel modal__panel--wide" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+      <button class="modal__close icon-btn" data-close-modal aria-label="Cerrar comparador">✕</button>
+      <h2 id="compareTitle" class="modal__title">Comparador de productos</h2>
+      <div class="compare-table-wrap" id="compareTable"></div>
+    </div>
+  </div>
+
+  <!-- ================= CHECKOUT ================= -->
+  <div class="modal" id="checkoutModal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <button class="modal__close icon-btn" data-close-modal aria-label="Cerrar checkout">✕</button>
+      <h2 id="checkoutTitle" class="modal__title">Finalizar compra</h2>
+
+      <ol class="steps" id="checkoutSteps">
+        <li class="steps__item is-active" data-step-ind="1">1. Datos</li>
+        <li class="steps__item" data-step-ind="2">2. Confirmar</li>
+        <li class="steps__item" data-step-ind="3">3. Listo</li>
+      </ol>
+
+      <!-- Paso 1: datos -->
+      <form id="checkoutForm" novalidate data-step="1">
+        <div class="form__field">
+          <label for="coName">Nombre completo</label>
+          <input type="text" id="coName" autocomplete="name">
+          <p class="form__error" id="coNameError" role="alert"></p>
+        </div>
+        <div class="form__field">
+          <label for="coEmail">Correo electrónico</label>
+          <input type="email" id="coEmail" autocomplete="email">
+          <p class="form__error" id="coEmailError" role="alert"></p>
+        </div>
+        <div class="form__field">
+          <label for="coAddress">Dirección de entrega</label>
+          <textarea id="coAddress" rows="3" autocomplete="street-address"></textarea>
+          <p class="form__error" id="coAddressError" role="alert"></p>
+        </div>
+        <button class="btn btn--primary btn--block" type="submit">Continuar</button>
+      </form>
+
+      <!-- Paso 2: resumen -->
+      <div data-step="2" hidden>
+        <div class="checkout-summary" id="checkoutSummary"></div>
+        <div class="checkout-actions">
+          <button class="btn btn--ghost" id="coBackBtn">← Volver</button>
+          <button class="btn btn--primary" id="coConfirmBtn">Confirmar pedido</button>
+        </div>
+      </div>
+
+      <!-- Paso 3: éxito -->
+      <div data-step="3" hidden>
+        <div class="checkout-success">
+          <span aria-hidden="true">✅</span>
+          <h3>¡Pedido confirmado!</h3>
+          <p>Número de orden: <strong id="orderNumber"></strong></p>
+          <p class="checkout-success__note">Te enviaremos el seguimiento a tu correo.</p>
+          <button class="btn btn--primary" id="coDoneBtn">Seguir comprando</button>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/cart-ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
